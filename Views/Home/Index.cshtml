@@ -1,0 +1,49 @@
+﻿@{
+    ViewBag.Title = "MediCore Dashboard";
+}
+
+<div class="jumbotron" style="background-color: #007bff; color: white; margin-top: 20px;">
+    <h1>MediCore Hospital Management</h1>
+    <p class="lead">Pre-Audit Performance & Patient Flow Control Centre (GCN: 4)</p>
+</div>
+
+<div class="row">
+    <div class="col-md-3">
+        <div class="panel panel-info" style="border: 1px solid #bce8f1; border-radius: 4px; padding: 15px; text-align: center;">
+            <h3>@ViewBag.DischargedCount</h3>
+            <p><strong>Total Discharges Processed</strong></p>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="panel panel-danger" style="border: 1px solid #ebccd1; border-radius: 4px; padding: 15px; text-align: center;">
+            <h3 class="text-danger">@ViewBag.EmergencyCount</h3>
+            <p><strong>Active Emergency Cases</strong></p>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="panel panel-success" style="border: 1px solid #d6e9c6; border-radius: 4px; padding: 15px; text-align: center;">
+            <h3 class="text-success">@ViewBag.ActivePatients</h3>
+            <p><strong>Bed Inflow Current Month</strong></p>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="panel panel-warning" style="border: 1px solid #faebcc; border-radius: 4px; padding: 15px; text-align: center;">
+            <h3 class="text-warning">@ViewBag.AuditCapacityScore%</h3>
+            <p><strong>Audit Readiness Capacity</strong><br /><small>(Derived from ID digits: 26)</small></p>
+        </div>
+    </div>
+</div>
+
+<hr />
+
+<div class="row" style="margin-top: 30px;">
+    <div class="col-md-4">
+        <a class="btn btn-primary btn-block btn-lg" href="@Url.Action("Index", "Patients")">📋 Manage Patients Records</a>
+    </div>
+    <div class="col-md-4">
+        <a class="btn btn-info btn-block btn-lg" href="@Url.Action("Index", "Doctors")">🩺 Manage Doctor Allocations</a>
+    </div>
+    <div class="col-md-4">
+        <a class="btn btn-success btn-block btn-lg" href="@Url.Action("Index", "Admissions")">🛏️ Live Bed Admissions</a>
+    </div>
+</div>

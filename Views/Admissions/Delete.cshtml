@@ -1,0 +1,80 @@
+﻿@model MedicoreHospital.Models.Admission
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Delete</title>
+</head>
+<body>
+    <h3>Are you sure you want to delete this?</h3>
+    <div>
+        <h4>Admission</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.Doctor.Name)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Doctor.Name)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Patient.Name)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Patient.Name)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.WardName)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.WardName)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.BedNumber)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.BedNumber)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.AdmissionDate)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.AdmissionDate)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.DischargeDate)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.DischargeDate)
+            </dd>
+    
+        </dl>
+    
+        @using (Html.BeginForm()) {
+            @Html.AntiForgeryToken()
+    
+            <div class="form-actions no-color">
+                <input type="submit" value="Delete" class="btn btn-default" /> |
+                @Html.ActionLink("Back to List", "Index")
+            </div>
+        }
+    </div>
+</body>
+</html>

@@ -1,0 +1,74 @@
+﻿@model MedicoreHospital.Models.Admission
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Details</title>
+</head>
+<body>
+    <div>
+        <h4>Admission</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.Doctor.Name)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Doctor.Name)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Patient.Name)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Patient.Name)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.WardName)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.WardName)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.BedNumber)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.BedNumber)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.AdmissionDate)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.AdmissionDate)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.DischargeDate)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.DischargeDate)
+            </dd>
+    
+        </dl>
+    </div>
+    <p>
+        @Html.ActionLink("Edit", "Edit", new { id = Model.AdmissionId }) |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+</body>
+</html>
